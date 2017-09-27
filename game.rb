@@ -20,7 +20,7 @@ class Game
         for number in @board.get_snake_hash()
             if player.get_position == number[:start_point]
                 player.set_position(number[:end_point])
-                puts "#{player.get_name} was eaten by a snake and deficated to square #{player.get_position}!"
+                puts "#{player.get_name} was eaten by a snake and deficated to square #{player.get_position}. Oh strawberry!"
             end
         end
         return player.get_position
