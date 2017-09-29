@@ -40,9 +40,15 @@ class TestGame < MiniTest::Test
 
         @game = Game.new("Snakes&Ladders", @players, @board, @dice)
 
-        @player_test = Player.new("Chad", 52)
-        @player_test_2 = Player.new("Tobi", 80)
+        @players_test = [
+        @player_test = Player.new("Chad", 52),
+        @player_test_2 = Player.new("Tobi", 80),
         @player_test_3 = Player.new("Oreofe", 100)
+    ]
+
+        @game2 = Game.new("Snakes&Ladders", @players_test, @board, @dice)
+
+
 
     end
 
@@ -62,7 +68,7 @@ class TestGame < MiniTest::Test
     end
 
     def test_check_win()
-        result3 = @game.check_win(@player_test_3)
+        result3 = @game2.check_win()
         expected3 = true
         assert_equal(result3, expected3)
     end

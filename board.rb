@@ -11,51 +11,27 @@ class Board
     end
 
     def snake_check_start_points()
-        array = []
-        for snake in @snakes
-            array << snake.get_start_point()
-        end
-        return array
+        @snakes.map { |snake| snake.get_start_point() }
     end
 
     def snake_check_end_points()
-        array = []
-        for snake in @snakes
-            array << snake.get_end_point()
-        end
-        return array
+        @snakes.map { |snake| snake.get_end_point() }
     end
 
     def ladder_check_start_points()
-        array = []
-        for ladder in @ladders
-            array << ladder.get_start_point()
-        end
-        return array
+        @ladders.map { |ladder| ladder.get_start_point() }
     end
 
     def ladder_check_end_points()
-        array = []
-        for ladder in @ladders
-            array << ladder.get_end_point()
-        end
-        return array
+        @ladders.map { |ladder| ladder.get_end_point() }
     end
 
     def get_ladder_hash()
-        array = []
-        for ladder in @ladders
-            array << ladder.get_ladder()
-        end
-        return array
+        @ladders.map { |ladder| ladder.get_ladder()}
     end
 
     def get_snake_hash()
-        array = []
-        for snake in @snakes
-            array << snake.get_snake()
-        end
-        return array
+        @snakes.map { |snake| snake.get_snake() }
     end
 
 
